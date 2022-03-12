@@ -1,0 +1,36 @@
+<html>
+<header>
+	<title>test</title>
+</header>
+
+<body>
+
+</body>
+<script type="module">
+
+	import MyArray from './source/MyArray.js'
+	import MyObject from './source/MyObject.js'
+	import MyTree from './source/MyTree.js'
+
+	import { equalsType, equalsArray, equalsObject } from './source/equals.js'
+
+
+	const arr = [
+		{ id: '1', name: 'a' },
+		{ id: '2', name: 'b', parentId: '1' },
+		{ id: '3', name: 'c', parentId: '1' },
+		{ id: '4', name: 'd' },
+		{ id: '5', name: 'e', parentId: '1' },
+		{ id: '6', name: 'f', parentId: '2' },
+		{ id: '7', name: 'g', parentId: '4' },
+		{ id: '8', name: 'h', parentId: '7' },
+		{ id: '9', name: 'i', parentId: '10' },
+		{ id: '10', name: 'j', parentId: '2' },
+	]
+
+	const result = MyTree.from(arr)
+	console.log(result)
+
+</script>
+
+</html>
